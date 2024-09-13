@@ -32,7 +32,7 @@ class Computer:
         self.year_made=year_made
         self.price=price
         #now all of the attributes are referenced and stored
-
+    
 
 def main():
     
@@ -46,6 +46,11 @@ def main():
 
     print(computer.description)
     # What methods will you need?
+    computer.updateComputer('mac')
+    print(computer.operating_system)
+    computer.updatePrice(20)
+    print(computer.price)
+
 
 if __name__=='__main__':
     main()
