@@ -5,7 +5,7 @@ class Computer:
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
     
-    #these are attributes
+    #these are attributes of the computer
     description: str
     processor_type: str
     hard_drive_capacity: int

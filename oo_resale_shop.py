@@ -2,39 +2,47 @@ from computer import *
 
 class ResaleShop:
 
-    # What attributes will it need?
+    # attribute inventory
     inventory:list
 
 
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
+    #constructor 
     def __init__(self, inventory:list, ):
         self.inventory=inventory
 
+    #function to buy a computer and add to the inventory 
     def buyComputer(self, computer:Computer):
         self.inventory.append(computer)
     
+    #function to sell  a computer and remove to the inventory 
     def sellComputer(self, computer:Computer):
         if computer in self.inventory:
             self.inventory.remove(computer)
         else: 
             print('computer doesnt exist')
-
+        
+    #function to update the price 
     def updatePrice(self,computer:Computer, new_price:int):
         if computer in self.inventory:
             computer.price=new_price
         else:
             print('computer doesnt exist')
 
+    #function to update the computer operating system 
     def updateComputer(self,computer:Computer, new_operating_system:str):
         if computer in self.inventory:
             computer.operating_system=new_operating_system
         else:
             print('computer doesnt exist')
+   
+    #function to print the inventory 
+    def printInventory(self, computer:Computer):
+        for computer in self.inventory:
+            print(computer.description)
     
-    def printInventory(self):
-        print(self.inventory)
-    
+    #function to refurbish the computer and change the price and the operating system 
     def refurbish(self, computer:Computer, new_operating_system:str):
         if computer in self.inventory:
             if computer.year_made < 2000:
@@ -76,11 +84,14 @@ def main():
     print(computer2.price)
     myshop.updatePrice(computer2,20)
     print(computer2.price)
-    # What methods will you need?
     #variable.method(parmater)
     print(computer2.operating_system)
     myshop.updateComputer(computer2,'idk')
     print(computer2.operating_system)
+    myshop.refurbish(computer2,'meow')
+    print(computer2.operating_system)
+    myshop.printInventory(myshop.inventory)
+
 
 
 main()
