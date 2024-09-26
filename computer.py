@@ -46,9 +46,7 @@ def main():
 
     print(computer.description)
     # What methods will you need?
-    computer.updateComputer('mac')
     print(computer.operating_system)
-    computer.updatePrice(20)
     print(computer.price)
 
 
