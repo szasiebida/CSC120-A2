@@ -6,8 +6,6 @@ class ResaleShop:
     inventory:list
 
 
-    # How will you set up your constructor?
-    # Remember: in python, all constructors have the same name (__init__)
     #constructor 
     def __init__(self, inventory:list, ):
         self.inventory=inventory

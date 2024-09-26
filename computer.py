@@ -1,9 +1,4 @@
 class Computer:
-
-    # What attributes will it need?
-
-    # How will you set up your constructor?
-    # Remember: in python, all constructors have the same name (__init__)
     
     #these are attributes of the computer
     description: str
@@ -15,7 +10,6 @@ class Computer:
     price: int
     
     
-    #now all of the attributes are referenced and stored
     def __init__(self, description: str,
                     processor_type: str,
                     hard_drive_capacity: int,
